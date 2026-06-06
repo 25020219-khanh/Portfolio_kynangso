@@ -1064,6 +1064,37 @@
     .skill-bar.before {
       background: var(--cream-dark);
     }
+
+    /* Print Styles to fix header overlap and clean up layout */
+    @media print {
+      nav {
+        display: none !important;
+      }
+      
+      body {
+        padding-top: 0 !important;
+        background: var(--cream) !important;
+        color: var(--text-dark) !important;
+      }
+      
+      #home {
+        min-height: auto !important;
+        padding: 3rem 0 !important;
+      }
+      
+      section {
+        padding: 3rem 0 !important;
+        page-break-inside: avoid;
+      }
+      
+      .hero-visual {
+        display: flex !important;
+      }
+      
+      .pdf-link, .card-actions a.pdf-link, .modal-pdf-btn {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 
